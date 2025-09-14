@@ -1,3 +1,4 @@
+kagglehub
 streamlit
 pandas
 numpy
@@ -7,3 +8,4 @@ groq
 nltk
 emoji
 python-dotenv
+
