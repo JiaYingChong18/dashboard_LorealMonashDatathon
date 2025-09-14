@@ -8,4 +8,5 @@ groq
 nltk
 emoji
 python-dotenv
+matplotlib
 
