@@ -3,7 +3,8 @@ pandas
 numpy
 plotly
 altair
-groq
 nltk
 emoji
 python-dotenv
+groq
+
