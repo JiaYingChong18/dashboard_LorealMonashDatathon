@@ -12,6 +12,8 @@ from nltk.corpus import stopwords
 import ast
 import emoji
 import os
+import gdown
+import kagglehub
 
 from dotenv import load_dotenv
 
@@ -27,9 +29,14 @@ st.set_page_config(
 # ---------------- Load CSV ----------------
 @st.cache_data
 def load_data():
-    url = "https://drive.google.com/uc?id=1kC17CLyaBajwWo-Q8ZhmG0FuA_krGr7J&export=download"
 
-    df = pd.read_csv(url)
+    # Download latest version of your Kaggle dataset
+    dataset_path = kagglehub.dataset_download("jiayinggggggg18/first-data")
+    
+    # Assuming your CSV is inside the zip file
+    # Replace 'your_file.csv' with the actual filename in the dataset
+    df = pd.read_csv(f"{dataset_path}/finalise_cleaned_text2100k.csv")
+
     st.write("Columns in dataframe:", df.columns.tolist())
     # Relevance
     if "is_relevant" in df.columns:
@@ -706,5 +713,6 @@ with tab4:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
 
 
