@@ -36,7 +36,7 @@ def load_data():
     # Replace 'your_file.csv' with the actual filename in the dataset
     df = pd.read_csv(f"{dataset_path}/finalise_cleaned_text2100k.csv")
 
-    st.write("Columns in dataframe:", df.columns.tolist())
+    # st.write("Columns in dataframe:", df.columns.tolist())
     # Relevance
     if "is_relevant" in df.columns:
         df["is_relevant"] = df["is_relevant"].astype(bool)
@@ -712,6 +712,7 @@ with tab4:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
