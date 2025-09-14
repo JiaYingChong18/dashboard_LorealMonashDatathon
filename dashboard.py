@@ -30,7 +30,7 @@ def load_data():
     url = "https://drive.google.com/uc?export=download&id=1kC17CLyaBajwWo-Q8ZhmG0FuA_krGr7J"
 
     df = pd.read_csv(url)
-
+    st.write("Columns in dataframe:", df.columns.tolist())
     # Relevance
     if "is_relevant" in df.columns:
         df["is_relevant"] = df["is_relevant"].astype(bool)
@@ -706,3 +706,4 @@ with tab4:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
