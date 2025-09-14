@@ -27,7 +27,7 @@ st.set_page_config(
 # ---------------- Load CSV ----------------
 @st.cache_data
 def load_data():
-    url = "https://drive.google.com/uc?export=download&id=1kC17CLyaBajwWo-Q8ZhmG0FuA_krGr7J"
+    url = "https://drive.google.com/uc?id=1kC17CLyaBajwWo-Q8ZhmG0FuA_krGr7J&export=download"
 
     df = pd.read_csv(url)
     st.write("Columns in dataframe:", df.columns.tolist())
@@ -706,4 +706,5 @@ with tab4:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
 
